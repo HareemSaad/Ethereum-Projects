@@ -5,15 +5,6 @@ const { time } = require("@nomicfoundation/hardhat-network-helpers");
 
 
 describe("Crowd Funding", function () {
-    // async function deployCrowdFunding() {
-    //     const duration_in_seconds = 120;
-    //     const minimum_contribution_in_wei = 100;
-    //     const target = 1000;
-    //     //deploy
-    //     const CF = await ethers.getContractFactory("CrowdFunding");
-    //     const cf = await CF.deploy(duration_in_seconds, minimum_contribution_in_wei, target);
-    //     const[owner, acc1, acc2] = await ethers.getSigners();
-    // }
     describe("initially", function() {
         it("the initial balance of the contract should be zero", async function () {
             const CF = await ethers.getContractFactory("CrowdFunding");
@@ -179,20 +170,22 @@ describe("Crowd Funding", function () {
             await cf.openPoll("something", 100, owner.address);
             await expect(cf.connect(acc1).withdrawAmount()).to.be.revertedWith("Ownable: caller is not the owner")
         })
-    })
-
-    describe("vote", function() {
-        it("if no poll has started it throws an error", async function () {
+        it("if votes are lesser than 50% intended account does not recieves ether", async function() {
             const CF = await ethers.getContractFactory("CrowdFunding");
             const cf = await CF.deploy(20, 100, 1000);
-            const[owner, acc1, acc2, acc3] = await ethers.getSigners();
+            const[owner, acc1, acc2, acc3, acc4, acc5] = await ethers.getSigners();
+            // console.log(await acc5.getBalance());
             await cf.connect(acc1).contribute({value: 1000});
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100, owner.address);
-            await expect(cf.openPoll("something2", 200, owner.address)).to.be.revertedWith("previous poll has not been closed yet")
+            await cf.openPoll("something", 100, acc5.address);
+            await cf.withdrawAmount();
+            expect (await acc5.getBalance()).to.equal("10000000000000000000000")
         })
+    })
+
+    describe("vote", function() {
         it("if no poll has started it throws an error", async function () {
             const CF = await ethers.getContractFactory("CrowdFunding");
             const cf = await CF.deploy(20, 100, 1000);
