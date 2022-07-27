@@ -183,6 +183,21 @@ describe("Crowd Funding", function () {
             await cf.withdrawAmount();
             expect (await acc5.getBalance()).to.equal("10000000000000000000000")
         })
+        it("if votes are greater than 50% intended account recieves ether", async function() {
+            const CF = await ethers.getContractFactory("CrowdFunding");
+            const cf = await CF.deploy(20, 100, 1000);
+            const[owner, acc1, acc2, acc3, acc4, acc5] = await ethers.getSigners();
+            // console.log(await acc5.getBalance());
+            await cf.connect(acc1).contribute({value: 1000});
+            await cf.connect(acc2).contribute({value: 200});
+            await cf.connect(acc3).contribute({value: 200});
+            await time.increaseTo(await time.latest() + 20000);
+            await cf.openPoll("something", 100, acc5.address);
+            await cf.connect(acc1).vote();
+            await cf.connect(acc2).vote();
+            await cf.withdrawAmount();
+            expect (await acc5.getBalance()).to.equal("10000000000000000000100")
+        })
     })
 
     describe("vote", function() {
