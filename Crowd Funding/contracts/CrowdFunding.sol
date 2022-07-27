@@ -13,10 +13,11 @@ contract CrowdFunding is Ownable{
     uint pollNumber = 0;
     bool isVotingOpen = false;
     uint amount;
+    address reciever;
     uint public numberOfContributers = 0;
     uint public numberOfYesses = 0;
     
-    event pollStarted (uint indexed pollNumber, string indexed notion , uint indexed amount);
+    event pollStarted (uint indexed pollNumber, string notion , uint indexed amount, address indexed reciver);
     event Received(address, uint);
     
     mapping(uint256 => mapping(address => bool)) private polls;
@@ -64,13 +65,14 @@ contract CrowdFunding is Ownable{
         payable(msg.sender).transfer(_amount);
     }
 
-    function openPoll(string memory _notion, uint _amount) public onlyOwner {
+    function openPoll(string memory _notion, uint _amount, address _reciever) public onlyOwner {
         require(hasDeadlinePassed(), "deadline has not passed");
         require(isVotingOpen == false, "previous poll has not been closed yet");
         require(numberOfContributers >= 3, "insufficient contributers");
         isVotingOpen = true;
-        emit pollStarted (pollNumber, _notion, _amount);
+        emit pollStarted (pollNumber, _notion, _amount, _reciever);
         amount = _amount;
+        reciever = _reciever;
     }
 
     function _endPoll () internal {
@@ -84,9 +86,10 @@ contract CrowdFunding is Ownable{
         _endPoll();
         uint poll = (numberOfYesses * 100) / numberOfContributers;
         numberOfYesses = 0;
+        uint _amount = amount;
         amount = 0;
         if(poll >= 50){
-            payable(owner()).transfer(amount);
+            payable(reciever).transfer(_amount);
             return true;
         } else {
             return false;

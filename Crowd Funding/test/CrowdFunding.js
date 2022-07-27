@@ -149,15 +149,15 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100);
-            await expect(cf.openPoll("something2", 200)).to.be.revertedWith("previous poll has not been closed yet")
+            await cf.openPoll("something", 100, owner.address);
+            await expect(cf.openPoll("something2", 200, owner.address)).to.be.revertedWith("previous poll has not been closed yet")
         })
         it("throws error if anyone other than owner tries to open a poll", async function() {
             const CF = await ethers.getContractFactory("CrowdFunding");
             const cf = await CF.deploy(20, 100, 1000);
             const[owner, acc1] = await ethers.getSigners();
             await time.increaseTo(await time.latest() + 20000);
-            await expect(cf.connect(acc1).openPoll("something2", 200)).to.be.revertedWith("Ownable: caller is not the owner")
+            await expect(cf.connect(acc1).openPoll("something2", 200, owner.address)).to.be.revertedWith("Ownable: caller is not the owner")
         })
     })
 
@@ -176,7 +176,7 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100);
+            await cf.openPoll("something", 100, owner.address);
             await expect(cf.connect(acc1).withdrawAmount()).to.be.revertedWith("Ownable: caller is not the owner")
         })
     })
@@ -190,8 +190,8 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100);
-            await expect(cf.openPoll("something2", 200)).to.be.revertedWith("previous poll has not been closed yet")
+            await cf.openPoll("something", 100, owner.address);
+            await expect(cf.openPoll("something2", 200, owner.address)).to.be.revertedWith("previous poll has not been closed yet")
         })
         it("if no poll has started it throws an error", async function () {
             const CF = await ethers.getContractFactory("CrowdFunding");
@@ -207,7 +207,7 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100);            
+            await cf.openPoll("something", 100, owner.address);            
             await expect(cf.vote()).to.be.revertedWith("the manager cannot vote")
         })
         it("if a person with no contribution tries to vote, it throws an error", async function () {
@@ -218,7 +218,7 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100);            
+            await cf.openPoll("something", 100, owner.address);            
             await expect(cf.connect(acc4).vote()).to.be.revertedWith("you have not contributed anything, not eligible to vote")
         })
         it("if a person tries to vote again, it throws an error", async function () {
@@ -229,7 +229,7 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100);    
+            await cf.openPoll("something", 100, owner.address);    
             await cf.connect(acc1).vote();        
             await expect(cf.connect(acc1).vote()).to.be.revertedWith("you have already voted")
         })
@@ -241,7 +241,7 @@ describe("Crowd Funding", function () {
             await cf.connect(acc2).contribute({value: 200});
             await cf.connect(acc3).contribute({value: 200});
             await time.increaseTo(await time.latest() + 20000);
-            await cf.openPoll("something", 100); 
+            await cf.openPoll("something", 100, owner.address); 
             expect (await cf.numberOfYesses()).to.equal(0);   
             await cf.connect(acc1).vote();        
             expect (await cf.numberOfYesses()).to.equal(1);   
