@@ -11,6 +11,7 @@ In my version, the donors and the owner have rights and have to follow some rule
 
 
 <b>RULES: </b>
+
 01- Owner cannot fund thier own contract - hence owner will have no say in the votes.
 
 02- Once the contract is deployed an agreed upon deadline is set donors can only contribute within this deadline
