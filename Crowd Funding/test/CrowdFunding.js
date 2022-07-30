@@ -150,6 +150,25 @@ describe("Crowd Funding", function () {
             await time.increaseTo(await time.latest() + 20000);
             await expect(cf.connect(acc1).openPoll("something2", 200, owner.address)).to.be.revertedWith("Ownable: caller is not the owner")
         })
+        it("throws error minimum taget is not met", async function() {
+            const CF = await ethers.getContractFactory("CrowdFunding");
+            const cf = await CF.deploy(20, 100, 1000);
+            const[owner, acc1, acc2, acc3] = await ethers.getSigners();
+            await cf.connect(acc1).contribute({value: 100});
+            await cf.connect(acc2).contribute({value: 200});
+            await cf.connect(acc3).contribute({value: 200});
+            await time.increaseTo(await time.latest() + 20000);
+            await expect(cf.openPoll("something2", 200, owner.address)).to.be.revertedWith("minimum target not met")
+        })
+        it("throws error contributors are less than 3", async function() {
+            const CF = await ethers.getContractFactory("CrowdFunding");
+            const cf = await CF.deploy(20, 100, 1000);
+            const[owner, acc1, acc2, acc3] = await ethers.getSigners();
+            await cf.connect(acc1).contribute({value: 1000});
+            await cf.connect(acc2).contribute({value: 200});
+            await time.increaseTo(await time.latest() + 20000);
+            await expect(cf.openPoll("something2", 200, owner.address)).to.be.revertedWith("insufficient contributers")
+        })
     })
 
     describe("withdraw amount / end poll", function() {

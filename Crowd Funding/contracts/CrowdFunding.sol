@@ -10,6 +10,7 @@ contract CrowdFunding is Ownable{
     uint duration;
     uint minimumContribution;
     uint minimumTarget;
+    uint totalFunds = 0;
     uint pollNumber = 0;
     bool isVotingOpen = false;
     uint amount;
@@ -44,6 +45,7 @@ contract CrowdFunding is Ownable{
         emit Received(msg.sender, msg.value);
         contributors[msg.sender] += msg.value;
         numberOfContributers += 1;
+        totalFunds += msg.value;
     }
 
     function seeContribution (address _address) view public returns(uint) {
@@ -52,7 +54,7 @@ contract CrowdFunding is Ownable{
 
     function recoverContribution() public payable{
         require(hasDeadlinePassed(), "deadline has not passed, contributions cannot be recovered rightnow");
-        require((address(this).balance < minimumTarget || numberOfContributers < 3), "target has been met, cannot recover contributions now or more than three contributors");
+        require((totalFunds < minimumTarget || numberOfContributers < 3), "target has been met, cannot recover contributions now or more than three contributors");
         require(contributors[msg.sender] != 0, "you have not contributed anything");
         /*
         payable(msg.sender).transfer(_amount);
@@ -69,6 +71,7 @@ contract CrowdFunding is Ownable{
         require(hasDeadlinePassed(), "deadline has not passed");
         require(isVotingOpen == false, "previous poll has not been closed yet");
         require(numberOfContributers >= 3, "insufficient contributers");
+        require(totalFunds > minimumTarget, "minimum target not met");
         isVotingOpen = true;
         emit pollStarted (pollNumber, _notion, _amount, _reciever);
         amount = _amount;
