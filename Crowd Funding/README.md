@@ -21,4 +21,7 @@ In my version, the donors and the owner have rights and have to follow some rule
 04- If dead line ends and both conditions are met the owner can open polls and have the donors vote.
 
 05- If votes for a poll are greater than 50 % owner can spend the money other wise not.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4a11ccd1e623e141d633f2d4598df8d6edf59f02
