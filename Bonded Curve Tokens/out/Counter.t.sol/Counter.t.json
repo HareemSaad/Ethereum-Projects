@@ -1,0 +1,109 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/foundry/test/Counter.t.sol",
+    "id": 26493,
+    "exportedSymbols": {
+      "Counter": [
+        21
+      ],
+      "DSTest": [
+        1808
+      ],
+      "StdAssertions": [
+        3114
+      ],
+      "StdChains": [
+        3778
+      ],
+      "StdCheats": [
+        5739
+      ],
+      "StdStorage": [
+        6646
+      ],
+      "StdUtils": [
+        8833
+      ],
+      "Test": [
+        8875
+      ],
+      "TestBase": [
+        1868
+      ],
+      "Vm": [
+        10165
+      ],
+      "console": [
+        18229
+      ],
+      "console2": [
+        26325
+      ],
+      "stdError": [
+        5805
+      ],
+      "stdJson": [
+        6472
+      ],
+      "stdMath": [
+        6614
+      ],
+      "stdStorage": [
+        8079
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:561:16",
+    "nodes": [
+      {
+        "id": 26490,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:16",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 26491,
+        "nodeType": "ImportDirective",
+        "src": "68:36:16",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/Test.sol",
+        "file": "lib/forge-std/src/Test.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26493,
+        "sourceUnit": 8876,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26492,
+        "nodeType": "ImportDirective",
+        "src": "106:31:16",
+        "nodes": [],
+        "absolutePath": "contracts/Counter.sol",
+        "file": "contracts/Counter.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26493,
+        "sourceUnit": 22,
+        "symbolAliases": [],
+        "unitAlias": ""
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 16
+}
