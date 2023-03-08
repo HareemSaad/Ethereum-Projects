@@ -1,0 +1,1917 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "log",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "log_address",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "val",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "log_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "int256[]",
+          "name": "val",
+          "type": "int256[]"
+        }
+      ],
+      "name": "log_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "val",
+          "type": "address[]"
+        }
+      ],
+      "name": "log_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "log_bytes",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "log_bytes32",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "name": "log_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "val",
+          "type": "address"
+        }
+      ],
+      "name": "log_named_address",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "val",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "log_named_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256[]",
+          "name": "val",
+          "type": "int256[]"
+        }
+      ],
+      "name": "log_named_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "val",
+          "type": "address[]"
+        }
+      ],
+      "name": "log_named_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "val",
+          "type": "bytes"
+        }
+      ],
+      "name": "log_named_bytes",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "val",
+          "type": "bytes32"
+        }
+      ],
+      "name": "log_named_bytes32",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "decimals",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_decimal_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "val",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "decimals",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_decimal_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        }
+      ],
+      "name": "log_named_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "val",
+          "type": "string"
+        }
+      ],
+      "name": "log_named_string",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "val",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "log_string",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "logs",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "IS_TEST",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "contract Counter",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "failed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "setUp",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testIncrement",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "testSetNumber",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60806040526000805460ff1916600117905534801561001d57600080fd5b506108bc8061002d6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80630a9254e41461006757806361bc221a1461007157806370f985be146100a1578063b913a5ca146100b4578063ba414fa6146100bc578063fa7626d4146100d4575b600080fd5b61006f6100e1565b005b601354610084906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b61006f6100af3660046106b5565b61017a565b61006f61025b565b6100c4610346565b6040519015158152602001610098565b6000546100c49060ff1681565b6040516100ed906106a8565b604051809103906000f080158015610109573d6000803e3d6000fd5b50601380546001600160a01b0319166001600160a01b03929092169182179055604051633fb5c1cb60e01b815260006004820152633fb5c1cb90602401600060405180830381600087803b15801561016057600080fd5b505af1158015610174573d6000803e3d6000fd5b50505050565b601354604051633fb5c1cb60e01b8152600481018390526001600160a01b0390911690633fb5c1cb90602401600060405180830381600087803b1580156101c057600080fd5b505af11580156101d4573d6000803e3d6000fd5b50505050610258601360009054906101000a90046001600160a01b03166001600160a01b0316638381f58a6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561022e573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061025291906106ce565b82610471565b50565b601360009054906101000a90046001600160a01b03166001600160a01b031663d09de08a6040518163ffffffff1660e01b8152600401600060405180830381600087803b1580156102ab57600080fd5b505af11580156102bf573d6000803e3d6000fd5b50505050610344601360009054906101000a90046001600160a01b03166001600160a01b0316638381f58a6040518163ffffffff1660e01b8152600401602060405180830381865afa158015610319573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061033d91906106ce565b6001610471565b565b60008054610100900460ff16156103665750600054610100900460ff1690565b6000737109709ecfa91a80626ff3989d68f67f5b1dd12d3b1561046c5760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190526519985a5b195960d21b828401528251808303840181526060830190935260009290916103f4917f667f9d70ca411d70ead50d8d5c22070dafc36ad75f3dcf5e7237b22ade9aecc491608001610717565b60408051601f198184030181529082905261040e9161073b565b6000604051808303816000865af19150503d806000811461044b576040519150601f19603f3d011682016040523d82523d6000602084013e610450565b606091505b5091505080806020019051810190610468919061074e565b9150505b919050565b808214610598577f41304facd9323d75b11bcdd609cb38effffdb05710f7caf0e9b16c6d9d709f506040516104e29060208082526022908201527f4572726f723a2061203d3d2062206e6f7420736174697366696564205b75696e604082015261745d60f01b606082015260800190565b60405180910390a160408051818152600a81830152690808115e1c1958dd195960b21b60608201526020810183905290517fb2de2fbe801a0df6c0cbddfd448ba3c41d48a040ca35c56c8196ef0fcae721a89181900360800190a160408051818152600a8183015269080808081058dd1d585b60b21b60608201526020810184905290517fb2de2fbe801a0df6c0cbddfd448ba3c41d48a040ca35c56c8196ef0fcae721a89181900360800190a161059861059c565b5050565b737109709ecfa91a80626ff3989d68f67f5b1dd12d3b156106975760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190526519985a5b195960d21b9282019290925260016060820152600091907f70ca10bbd0dbfd9020a9f4b13402c16cb120705e0d1c0aeab10fa353ae586fc49060800160408051601f19818403018152908290526106369291602001610717565b60408051601f19818403018152908290526106509161073b565b6000604051808303816000865af19150503d806000811461068d576040519150601f19603f3d011682016040523d82523d6000602084013e610692565b606091505b505050505b6000805461ff001916610100179055565b6101168061077183390190565b6000602082840312156106c757600080fd5b5035919050565b6000602082840312156106e057600080fd5b5051919050565b6000815160005b8181101561070857602081850181015186830152016106ee565b50600093019283525090919050565b6001600160e01b031983168152600061073360048301846106e7565b949350505050565b600061074782846106e7565b9392505050565b60006020828403121561076057600080fd5b8151801515811461074757600080fdfe608060405234801561001057600080fd5b5060f78061001f6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80633fb5c1cb1460415780638381f58a146053578063d09de08a14606d575b600080fd5b6051604c3660046083565b600055565b005b605b60005481565b60405190815260200160405180910390f35b6051600080549080607c83609b565b9190505550565b600060208284031215609457600080fd5b5035919050565b60006001820160ba57634e487b7160e01b600052601160045260246000fd5b506001019056fea26469706673582212208cd3cf52a74c7dfb7f30c587e0c6c66ecd64d2e1a59ed665693d505fdc89f41164736f6c63430008110033a26469706673582212206e122966af2d801203a5162f73e401ffe27205dd0ccfd6770d5c81d0fc02e50a64736f6c63430008110033",
+    "sourceMap": "127:396:17:-:0;;;1609:26:2;;;-1:-1:-1;;1609:26:2;1631:4;1609:26;;;127:396:17;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80630a9254e41461006757806361bc221a1461007157806370f985be146100a1578063b913a5ca146100b4578063ba414fa6146100bc578063fa7626d4146100d4575b600080fd5b61006f6100e1565b005b601354610084906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b61006f6100af3660046106b5565b61017a565b61006f61025b565b6100c4610346565b6040519015158152602001610098565b6000546100c49060ff1681565b6040516100ed906106a8565b604051809103906000f080158015610109573d6000803e3d6000fd5b50601380546001600160a01b0319166001600160a01b03929092169182179055604051633fb5c1cb60e01b815260006004820152633fb5c1cb90602401600060405180830381600087803b15801561016057600080fd5b505af1158015610174573d6000803e3d6000fd5b50505050565b601354604051633fb5c1cb60e01b8152600481018390526001600160a01b0390911690633fb5c1cb90602401600060405180830381600087803b1580156101c057600080fd5b505af11580156101d4573d6000803e3d6000fd5b50505050610258601360009054906101000a90046001600160a01b03166001600160a01b0316638381f58a6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561022e573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061025291906106ce565b82610471565b50565b601360009054906101000a90046001600160a01b03166001600160a01b031663d09de08a6040518163ffffffff1660e01b8152600401600060405180830381600087803b1580156102ab57600080fd5b505af11580156102bf573d6000803e3d6000fd5b50505050610344601360009054906101000a90046001600160a01b03166001600160a01b0316638381f58a6040518163ffffffff1660e01b8152600401602060405180830381865afa158015610319573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061033d91906106ce565b6001610471565b565b60008054610100900460ff16156103665750600054610100900460ff1690565b6000737109709ecfa91a80626ff3989d68f67f5b1dd12d3b1561046c5760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190526519985a5b195960d21b828401528251808303840181526060830190935260009290916103f4917f667f9d70ca411d70ead50d8d5c22070dafc36ad75f3dcf5e7237b22ade9aecc491608001610717565b60408051601f198184030181529082905261040e9161073b565b6000604051808303816000865af19150503d806000811461044b576040519150601f19603f3d011682016040523d82523d6000602084013e610450565b606091505b5091505080806020019051810190610468919061074e565b9150505b919050565b808214610598577f41304facd9323d75b11bcdd609cb38effffdb05710f7caf0e9b16c6d9d709f506040516104e29060208082526022908201527f4572726f723a2061203d3d2062206e6f7420736174697366696564205b75696e604082015261745d60f01b606082015260800190565b60405180910390a160408051818152600a81830152690808115e1c1958dd195960b21b60608201526020810183905290517fb2de2fbe801a0df6c0cbddfd448ba3c41d48a040ca35c56c8196ef0fcae721a89181900360800190a160408051818152600a8183015269080808081058dd1d585b60b21b60608201526020810184905290517fb2de2fbe801a0df6c0cbddfd448ba3c41d48a040ca35c56c8196ef0fcae721a89181900360800190a161059861059c565b5050565b737109709ecfa91a80626ff3989d68f67f5b1dd12d3b156106975760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190526519985a5b195960d21b9282019290925260016060820152600091907f70ca10bbd0dbfd9020a9f4b13402c16cb120705e0d1c0aeab10fa353ae586fc49060800160408051601f19818403018152908290526106369291602001610717565b60408051601f19818403018152908290526106509161073b565b6000604051808303816000865af19150503d806000811461068d576040519150601f19603f3d011682016040523d82523d6000602084013e610692565b606091505b505050505b6000805461ff001916610100179055565b6101168061077183390190565b6000602082840312156106c757600080fd5b5035919050565b6000602082840312156106e057600080fd5b5051919050565b6000815160005b8181101561070857602081850181015186830152016106ee565b50600093019283525090919050565b6001600160e01b031983168152600061073360048301846106e7565b949350505050565b600061074782846106e7565b9392505050565b60006020828403121561076057600080fd5b8151801515811461074757600080fdfe608060405234801561001057600080fd5b5060f78061001f6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80633fb5c1cb1460415780638381f58a146053578063d09de08a14606d575b600080fd5b6051604c3660046083565b600055565b005b605b60005481565b60405190815260200160405180910390f35b6051600080549080607c83609b565b9190505550565b600060208284031215609457600080fd5b5035919050565b60006001820160ba57634e487b7160e01b600052601160045260246000fd5b506001019056fea26469706673582212208cd3cf52a74c7dfb7f30c587e0c6c66ecd64d2e1a59ed665693d505fdc89f41164736f6c63430008110033a26469706673582212206e122966af2d801203a5162f73e401ffe27205dd0ccfd6770d5c81d0fc02e50a64736f6c63430008110033",
+    "sourceMap": "127:396:17:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;191:94;;;:::i;:::-;;162:22;;;;;-1:-1:-1;;;;;162:22:17;;;;;;-1:-1:-1;;;;;195:32:18;;;177:51;;165:2;150:18;162:22:17;;;;;;;;404:117;;;;;;:::i;:::-;;:::i;291:107::-;;;:::i;1865:600:2:-;;;:::i;:::-;;;589:14:18;;582:22;564:41;;552:2;537:18;1865:600:2;424:187:18;1609:26:2;;;;;;;;;191:94:17;235:13;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;225:7:17;:23;;-1:-1:-1;;;;;;225:23:17;-1:-1:-1;;;;;225:23:17;;;;;;;;;258:20;;-1:-1:-1;;;258:20:17;;-1:-1:-1;258:20:17;;;770:25:18;258:17:17;;743:18:18;;258:20:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;191:94::o;404:117::-;455:7;;:20;;-1:-1:-1;;;455:20:17;;;;;770:25:18;;;-1:-1:-1;;;;;455:7:17;;;;:17;;743:18:18;;455:20:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;485:29;494:7;;;;;;;;;-1:-1:-1;;;;;494:7:17;-1:-1:-1;;;;;494:14:17;;:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;512:1;485:8;:29::i;:::-;404:117;:::o;291:107::-;333:7;;;;;;;;;-1:-1:-1;;;;;333:7:17;-1:-1:-1;;;;;333:17:17;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:29;371:7;;;;;;;;;-1:-1:-1;;;;;371:7:17;-1:-1:-1;;;;;371:14:17;;:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;389:1;362:8;:29::i;:::-;291:107::o;1865:600:2:-;1899:4;1920:7;;;;;;;1916:542;;;-1:-1:-1;1951:7:2;;;;;;;;1865:600::o;1916:542::-;1991:17;3070:42;3058:55;3141:16;2031:382;;2251:43;;;1712:64;2251:43;;;1351:51:18;;;-1:-1:-1;;;1418:18:18;;;1411:34;2251:43:2;;;;;;;;;1324:18:18;;;2251:43:2;;;-1:-1:-1;;1712:64:2;;2139:178;;2189:34;;2139:178;;;:::i;:::-;;;;-1:-1:-1;;2139:178:2;;;;;;;;;;2099:237;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2072:264;;;2381:7;2370:27;;;;;;;;;;;;:::i;:::-;2355:42;;2053:360;2031:382;2434:12;1865:600;-1:-1:-1;1865:600:2:o;5358:269::-;5421:1;5416;:6;5412:208;;5444:41;;;;;2744:2:18;2726:21;;;2783:2;2763:18;;;2756:30;2822:34;2817:2;2802:18;;2795:62;-1:-1:-1;;;2888:2:18;2873:18;;2866:32;2930:3;2915:19;;2542:398;5444:41:2;;;;;;;;5505:31;;;3157:21:18;;;3214:2;3194:18;;;3187:30;-1:-1:-1;;;3248:2:18;3233:18;;3226:40;3333:4;3318:20;;3311:36;;;5505:31:2;;;;;;;3298:3:18;5505:31:2;;;5556;;;3570:21:18;;;3627:2;3607:18;;;3600:30;-1:-1:-1;;;3661:2:18;3646:18;;3639:40;3746:4;3731:20;;3724:36;;;5556:31:2;;;;;;;3711:3:18;5556:31:2;;;5602:6;:4;:6::i;:::-;5358:269;;:::o;2474:435::-;3070:42;3058:55;3141:16;2510:367;;2714:67;;;1712:64;2714:67;;;3973:51:18;;;-1:-1:-1;;;4040:18:18;;;4033:34;;;;2774:4:2;4083:18:18;;;4076:34;2548:11:2;;1712:64;2647:43;;3946:18:18;;2714:67:2;;;-1:-1:-1;;2714:67:2;;;;;;;;;;2601:199;;;2714:67;2601:199;;:::i;:::-;;;;-1:-1:-1;;2601:199:2;;;;;;;;;;2565:250;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;2510:367:2;2887:7;:14;;-1:-1:-1;;2887:14:2;;;;;2474:435::o;-1:-1:-1:-;;;;;;;;:::o;239:180:18:-;298:6;351:2;339:9;330:7;326:23;322:32;319:52;;;367:1;364;357:12;319:52;-1:-1:-1;390:23:18;;239:180;-1:-1:-1;239:180:18:o;988:184::-;1058:6;1111:2;1099:9;1090:7;1086:23;1082:32;1079:52;;;1127:1;1124;1117:12;1079:52;-1:-1:-1;1150:16:18;;988:184;-1:-1:-1;988:184:18:o;1456:322::-;1497:3;1535:5;1529:12;1559:1;1569:128;1583:6;1580:1;1577:13;1569:128;;;1680:4;1665:13;;;1661:24;;1655:31;1642:11;;;1635:52;1598:12;1569:128;;;-1:-1:-1;1752:1:18;1716:16;;1741:13;;;-1:-1:-1;1716:16:18;;1456:322;-1:-1:-1;1456:322:18:o;1783:278::-;-1:-1:-1;;;;;;1968:33:18;;1956:46;;1938:3;2018:37;2052:1;2043:11;;2035:6;2018:37;:::i;:::-;2011:44;1783:278;-1:-1:-1;;;;1783:278:18:o;2066:189::-;2195:3;2220:29;2245:3;2237:6;2220:29;:::i;:::-;2213:36;2066:189;-1:-1:-1;;;2066:189:18:o;2260:277::-;2327:6;2380:2;2368:9;2359:7;2355:23;2351:32;2348:52;;;2396:1;2393;2386:12;2348:52;2428:9;2422:16;2481:5;2474:13;2467:21;2460:5;2457:32;2447:60;;2503:1;2500;2493:12",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "IS_TEST()": "fa7626d4",
+    "counter()": "61bc221a",
+    "failed()": "ba414fa6",
+    "setUp()": "0a9254e4",
+    "testIncrement()": "b913a5ca",
+    "testSetNumber(uint256)": "70f985be"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"log\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"log_address\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"val\",\"type\":\"uint256[]\"}],\"name\":\"log_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"int256[]\",\"name\":\"val\",\"type\":\"int256[]\"}],\"name\":\"log_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"val\",\"type\":\"address[]\"}],\"name\":\"log_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"log_bytes\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"log_bytes32\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"name\":\"log_int\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"log_named_address\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"val\",\"type\":\"uint256[]\"}],\"name\":\"log_named_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"int256[]\",\"name\":\"val\",\"type\":\"int256[]\"}],\"name\":\"log_named_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"val\",\"type\":\"address[]\"}],\"name\":\"log_named_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"val\",\"type\":\"bytes\"}],\"name\":\"log_named_bytes\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"val\",\"type\":\"bytes32\"}],\"name\":\"log_named_bytes32\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\"}],\"name\":\"log_named_decimal_int\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"val\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\"}],\"name\":\"log_named_decimal_uint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\"}],\"name\":\"log_named_int\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"val\",\"type\":\"string\"}],\"name\":\"log_named_string\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"val\",\"type\":\"uint256\"}],\"name\":\"log_named_uint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"log_string\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"log_uint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"logs\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"IS_TEST\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"counter\",\"outputs\":[{\"internalType\":\"contract Counter\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"failed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"setUp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testIncrement\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"testSetNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/foundry/test/Counter.t.sol\":\"CounterTest\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"Contracts/Counter.sol\":{\"keccak256\":\"0x09277f949d59a9521708c870dc39c2c434ad8f86a5472efda6a732ef728c0053\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://94cd5258357da018bf911aeda60ed9f5b130dce27445669ee200313cd3389200\",\"dweb:/ipfs/QmNbEfWAqXCtfQpk6u7TpGa8sTHXFLpUz7uebz2FVbchSC\"]},\"lib/forge-std/lib/ds-test/src/test.sol\":{\"keccak256\":\"0xd4cc3f57e7af003954200ec4ee92e8f189885cba55ae9cf87e7a59985d8e963e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://64df22826aa96e9c9eaebb698f5940ecafe95d72782b60b8f6fd68f6cd023bda\",\"dweb:/ipfs/QmSJGqC4GyyHdMUc2ViatN6wKZNBiaxRzntKH7JwM2UQ8R\"]},\"lib/forge-std/src/Base.sol\":{\"keccak256\":\"0x88b585aa59e3e902707a99ca0e59a85adbe623c138b6410e6c8b536de965089a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e199ff9217b07e9f59f72cc4b85a301bb37ce9cda7aea8ed30369e60d747450\",\"dweb:/ipfs/QmSmsTeuzawFLCmyVCKntQYfnXvjRcLLrvtapeVJ73hUUg\"]},\"lib/forge-std/src/StdAssertions.sol\":{\"keccak256\":\"0x33e455816737368f5e6379b8d3d24704e9ad75129351b25ef662839d81644262\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c94eabfa5bce4698279240a46b1167c063306267b355680921f6474dd8ec649\",\"dweb:/ipfs/QmVEFpsP2ccYUbyKHNRNELve8g7CFRYLLLJTSsQjMn2vfw\"]},\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0xcc3da026001a33a622acab639e9b517fb8695595a927e04e5905ae085890dd5e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d21956628088a2efee2ecc1b4ae1ce262dcc56c1d9f884fae9981d2333ede99b\",\"dweb:/ipfs/QmdschSxVDKX2w3QcqhTRa9XfAyAytDS9kkWY8DYyE6pbR\"]},\"lib/forge-std/src/StdCheats.sol\":{\"keccak256\":\"0x27c6de283cd8e16c3afc47e1219955b4de917faa90d08f2fdfa67acd34a64ab8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://948e3ded108e03a5bc4b5cfee639895cff96748f4fa769964326e387d3750495\",\"dweb:/ipfs/QmVPLEJQbKRbRWuBGtACkiWYkgd2cZvCqMyjbbGmawhLwg\"]},\"lib/forge-std/src/StdError.sol\":{\"keccak256\":\"0xce23c8ef835f3e9163487858105ebef195f9d42de5ae79e56417cfe66914c701\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e6c82a6bf10b9c9d92a0dbba09a88adab28ffe7c3a23bd83eb13ceff1358681b\",\"dweb:/ipfs/QmQR6HQ7QGGeH8TPXrFz9vSb7wvoCnwmuBJ4vGpCmLmPb6\"]},\"lib/forge-std/src/StdJson.sol\":{\"keccak256\":\"0xd0f8d1886007276d0af4a197670b711aac0d583b926a71f321debe4e92180514\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d2ba4a2cc2cab807e72e5a4229d08e234980a46e96c642ecf1dfafa5e0d199c3\",\"dweb:/ipfs/QmRwLCagD4gjkWr3XfL6JBLtV7K8rU3VFfrBnvT7pALDw1\"]},\"lib/forge-std/src/StdMath.sol\":{\"keccak256\":\"0x2937c68a288dbb54c9bb4209119817ea197ffbed21167c493f14dcbbc327c399\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a222d841d2d7e9bb92cf1fb0018a2b8f56d7829a7cab0dba8aa1ca6e7ef693a8\",\"dweb:/ipfs/QmUvKzRrjPthS5m4rKrs7zGq38xgjWRrQpKMLQJrHkAgX6\"]},\"lib/forge-std/src/StdStorage.sol\":{\"keccak256\":\"0x5a0b30c49be6f9380a2cee0f227b51a984f8b75f6e28e28560eee14d1f1bc681\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e2f1b6aa8fa11d044a8a1ed92dee3a8c1e82c8d955972fb16dcd9a829d4d5ddd\",\"dweb:/ipfs/QmPhgwgED3nZioET7kuK1xQfQrnuzKjtKyiH6YaCAiFHNd\"]},\"lib/forge-std/src/StdUtils.sol\":{\"keccak256\":\"0x6253d3be4a8c975a97fed6d4bbd3ef2bb436eb1b6002a0b42c07b4d99e931ed8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ced003a77268ca44768af0954e177543c6652a5c13c213940dd1dc988e07c10\",\"dweb:/ipfs/QmbPUB2bZZEhZHFqVLn26FMz323DHWc2LjKbndf9Zh84rE\"]},\"lib/forge-std/src/Test.sol\":{\"keccak256\":\"0xf4af87a604a5189d491c3e4cead9edfe78e63c94bc006fe475340a4a51dd2917\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://981b97a727f38849ff7ffec4bf17964f6fc562134128b39914e85159e7295406\",\"dweb:/ipfs/QmUqLQtsDg5yEVD8szFV2D4RN61YGcBB2fDStxxnCe9ark\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0x9f5b969304be23b7d48c5ff8184db6d272aed5f9f70ab98db7f1bccd92683146\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://967a1b5bf30ef0f6dcdbf779c520f6c505e1c99565139d9ca36f15e1b126feaa\",\"dweb:/ipfs/QmUCoVrXJK6roJBFSE51TtqBAWrd6py2pJShGHEisixnEU\"]},\"lib/forge-std/src/console.sol\":{\"keccak256\":\"0xbbdc11ec3a00e6b8c6c76e7f0ea46581239faee116324de4184dd0af011dd837\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://10581f46c044a7561d25d8ea203f4e89e13a807b40bf9d87520f69407447de42\",\"dweb:/ipfs/QmSFVUzcDB9QtNyjJ5fLzi3kqKhtEbDD7TZMgbzJ9wiC63\"]},\"lib/forge-std/src/console2.sol\":{\"keccak256\":\"0x3a9f913b929362c5ae23101a19d72df5f8dc4e357ff895e6d546c9e549117273\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5ac891596c301064567a367cccf41a89d4803612819c3bd9e830adeda330e4c0\",\"dweb:/ipfs/QmacNFCYH9fnhRoRSYBzApC7byhs5p9LoGCvBDBdzPmjqN\"]},\"lib/forge-std/src/interfaces/IMulticall3.sol\":{\"keccak256\":\"0x1313e079d13b9f3a47177eff1d226c41b0b51c0802c248d47d038eb65a084307\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2b51e2203055cda450dc04ce55644f209f67e208fc143a1f118cff66de010f20\",\"dweb:/ipfs/QmVtQjmG6YnHaDt81TvJM74TvzEh3SULR3HyzxVQFM59xZ\"]},\"test/foundry/test/Counter.t.sol\":{\"keccak256\":\"0x38d6f4ecb95de966e701b29a21d0a7e3829f871d08f28d1eaa023a6adb19678d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b9324c9b12ed4be9af2c438835dd93b6af89c9cc5035702296b00eaf051b8067\",\"dweb:/ipfs/QmWFaFwriWYGmqS5frwnXodDFnA222W3zB8z7tfQHK4Yt8\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_address",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "val",
+              "type": "uint256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int256[]",
+              "name": "val",
+              "type": "int256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "val",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_bytes",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_bytes32",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_int",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "val",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_address",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "val",
+              "type": "uint256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "int256[]",
+              "name": "val",
+              "type": "int256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "address[]",
+              "name": "val",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "val",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_bytes",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32",
+              "name": "val",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_bytes32",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "int256",
+              "name": "val",
+              "type": "int256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "decimals",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_decimal_int",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "val",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "decimals",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_decimal_uint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "int256",
+              "name": "val",
+              "type": "int256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_int",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "string",
+              "name": "val",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_string",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "val",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_uint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_string",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_uint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "logs",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "IS_TEST",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "counter",
+          "outputs": [
+            {
+              "internalType": "contract Counter",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "failed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setUp"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testIncrement"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "x",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testSetNumber"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/foundry/test/Counter.t.sol": "CounterTest"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "Contracts/Counter.sol": {
+        "keccak256": "0x09277f949d59a9521708c870dc39c2c434ad8f86a5472efda6a732ef728c0053",
+        "urls": [
+          "bzz-raw://94cd5258357da018bf911aeda60ed9f5b130dce27445669ee200313cd3389200",
+          "dweb:/ipfs/QmNbEfWAqXCtfQpk6u7TpGa8sTHXFLpUz7uebz2FVbchSC"
+        ],
+        "license": "UNLICENSED"
+      },
+      "lib/forge-std/lib/ds-test/src/test.sol": {
+        "keccak256": "0xd4cc3f57e7af003954200ec4ee92e8f189885cba55ae9cf87e7a59985d8e963e",
+        "urls": [
+          "bzz-raw://64df22826aa96e9c9eaebb698f5940ecafe95d72782b60b8f6fd68f6cd023bda",
+          "dweb:/ipfs/QmSJGqC4GyyHdMUc2ViatN6wKZNBiaxRzntKH7JwM2UQ8R"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "lib/forge-std/src/Base.sol": {
+        "keccak256": "0x88b585aa59e3e902707a99ca0e59a85adbe623c138b6410e6c8b536de965089a",
+        "urls": [
+          "bzz-raw://5e199ff9217b07e9f59f72cc4b85a301bb37ce9cda7aea8ed30369e60d747450",
+          "dweb:/ipfs/QmSmsTeuzawFLCmyVCKntQYfnXvjRcLLrvtapeVJ73hUUg"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdAssertions.sol": {
+        "keccak256": "0x33e455816737368f5e6379b8d3d24704e9ad75129351b25ef662839d81644262",
+        "urls": [
+          "bzz-raw://6c94eabfa5bce4698279240a46b1167c063306267b355680921f6474dd8ec649",
+          "dweb:/ipfs/QmVEFpsP2ccYUbyKHNRNELve8g7CFRYLLLJTSsQjMn2vfw"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdChains.sol": {
+        "keccak256": "0xcc3da026001a33a622acab639e9b517fb8695595a927e04e5905ae085890dd5e",
+        "urls": [
+          "bzz-raw://d21956628088a2efee2ecc1b4ae1ce262dcc56c1d9f884fae9981d2333ede99b",
+          "dweb:/ipfs/QmdschSxVDKX2w3QcqhTRa9XfAyAytDS9kkWY8DYyE6pbR"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdCheats.sol": {
+        "keccak256": "0x27c6de283cd8e16c3afc47e1219955b4de917faa90d08f2fdfa67acd34a64ab8",
+        "urls": [
+          "bzz-raw://948e3ded108e03a5bc4b5cfee639895cff96748f4fa769964326e387d3750495",
+          "dweb:/ipfs/QmVPLEJQbKRbRWuBGtACkiWYkgd2cZvCqMyjbbGmawhLwg"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdError.sol": {
+        "keccak256": "0xce23c8ef835f3e9163487858105ebef195f9d42de5ae79e56417cfe66914c701",
+        "urls": [
+          "bzz-raw://e6c82a6bf10b9c9d92a0dbba09a88adab28ffe7c3a23bd83eb13ceff1358681b",
+          "dweb:/ipfs/QmQR6HQ7QGGeH8TPXrFz9vSb7wvoCnwmuBJ4vGpCmLmPb6"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdJson.sol": {
+        "keccak256": "0xd0f8d1886007276d0af4a197670b711aac0d583b926a71f321debe4e92180514",
+        "urls": [
+          "bzz-raw://d2ba4a2cc2cab807e72e5a4229d08e234980a46e96c642ecf1dfafa5e0d199c3",
+          "dweb:/ipfs/QmRwLCagD4gjkWr3XfL6JBLtV7K8rU3VFfrBnvT7pALDw1"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdMath.sol": {
+        "keccak256": "0x2937c68a288dbb54c9bb4209119817ea197ffbed21167c493f14dcbbc327c399",
+        "urls": [
+          "bzz-raw://a222d841d2d7e9bb92cf1fb0018a2b8f56d7829a7cab0dba8aa1ca6e7ef693a8",
+          "dweb:/ipfs/QmUvKzRrjPthS5m4rKrs7zGq38xgjWRrQpKMLQJrHkAgX6"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdStorage.sol": {
+        "keccak256": "0x5a0b30c49be6f9380a2cee0f227b51a984f8b75f6e28e28560eee14d1f1bc681",
+        "urls": [
+          "bzz-raw://e2f1b6aa8fa11d044a8a1ed92dee3a8c1e82c8d955972fb16dcd9a829d4d5ddd",
+          "dweb:/ipfs/QmPhgwgED3nZioET7kuK1xQfQrnuzKjtKyiH6YaCAiFHNd"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdUtils.sol": {
+        "keccak256": "0x6253d3be4a8c975a97fed6d4bbd3ef2bb436eb1b6002a0b42c07b4d99e931ed8",
+        "urls": [
+          "bzz-raw://6ced003a77268ca44768af0954e177543c6652a5c13c213940dd1dc988e07c10",
+          "dweb:/ipfs/QmbPUB2bZZEhZHFqVLn26FMz323DHWc2LjKbndf9Zh84rE"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Test.sol": {
+        "keccak256": "0xf4af87a604a5189d491c3e4cead9edfe78e63c94bc006fe475340a4a51dd2917",
+        "urls": [
+          "bzz-raw://981b97a727f38849ff7ffec4bf17964f6fc562134128b39914e85159e7295406",
+          "dweb:/ipfs/QmUqLQtsDg5yEVD8szFV2D4RN61YGcBB2fDStxxnCe9ark"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Vm.sol": {
+        "keccak256": "0x9f5b969304be23b7d48c5ff8184db6d272aed5f9f70ab98db7f1bccd92683146",
+        "urls": [
+          "bzz-raw://967a1b5bf30ef0f6dcdbf779c520f6c505e1c99565139d9ca36f15e1b126feaa",
+          "dweb:/ipfs/QmUCoVrXJK6roJBFSE51TtqBAWrd6py2pJShGHEisixnEU"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/console.sol": {
+        "keccak256": "0xbbdc11ec3a00e6b8c6c76e7f0ea46581239faee116324de4184dd0af011dd837",
+        "urls": [
+          "bzz-raw://10581f46c044a7561d25d8ea203f4e89e13a807b40bf9d87520f69407447de42",
+          "dweb:/ipfs/QmSFVUzcDB9QtNyjJ5fLzi3kqKhtEbDD7TZMgbzJ9wiC63"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/console2.sol": {
+        "keccak256": "0x3a9f913b929362c5ae23101a19d72df5f8dc4e357ff895e6d546c9e549117273",
+        "urls": [
+          "bzz-raw://5ac891596c301064567a367cccf41a89d4803612819c3bd9e830adeda330e4c0",
+          "dweb:/ipfs/QmacNFCYH9fnhRoRSYBzApC7byhs5p9LoGCvBDBdzPmjqN"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/interfaces/IMulticall3.sol": {
+        "keccak256": "0x1313e079d13b9f3a47177eff1d226c41b0b51c0802c248d47d038eb65a084307",
+        "urls": [
+          "bzz-raw://2b51e2203055cda450dc04ce55644f209f67e208fc143a1f118cff66de010f20",
+          "dweb:/ipfs/QmVtQjmG6YnHaDt81TvJM74TvzEh3SULR3HyzxVQFM59xZ"
+        ],
+        "license": "MIT"
+      },
+      "test/foundry/test/Counter.t.sol": {
+        "keccak256": "0x38d6f4ecb95de966e701b29a21d0a7e3829f871d08f28d1eaa023a6adb19678d",
+        "urls": [
+          "bzz-raw://b9324c9b12ed4be9af2c438835dd93b6af89c9cc5035702296b00eaf051b8067",
+          "dweb:/ipfs/QmWFaFwriWYGmqS5frwnXodDFnA222W3zB8z7tfQHK4Yt8"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/foundry/test/Counter.t.sol",
+    "id": 26551,
+    "exportedSymbols": {
+      "Counter": [
+        26572
+      ],
+      "CounterTest": [
+        26550
+      ],
+      "DSTest": [
+        1808
+      ],
+      "StdAssertions": [
+        3114
+      ],
+      "StdChains": [
+        3778
+      ],
+      "StdCheats": [
+        5739
+      ],
+      "StdStorage": [
+        6646
+      ],
+      "StdUtils": [
+        8833
+      ],
+      "Test": [
+        8875
+      ],
+      "TestBase": [
+        1868
+      ],
+      "Vm": [
+        10165
+      ],
+      "console": [
+        18229
+      ],
+      "console2": [
+        26325
+      ],
+      "stdError": [
+        5805
+      ],
+      "stdJson": [
+        6472
+      ],
+      "stdMath": [
+        6614
+      ],
+      "stdStorage": [
+        8079
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:485:17",
+    "nodes": [
+      {
+        "id": 26490,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:17",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 26491,
+        "nodeType": "ImportDirective",
+        "src": "65:28:17",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/Test.sol",
+        "file": "forge-std/Test.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26551,
+        "sourceUnit": 8876,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26492,
+        "nodeType": "ImportDirective",
+        "src": "94:31:17",
+        "nodes": [],
+        "absolutePath": "Contracts/Counter.sol",
+        "file": "Contracts/Counter.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26551,
+        "sourceUnit": 26573,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26550,
+        "nodeType": "ContractDefinition",
+        "src": "127:396:17",
+        "nodes": [
+          {
+            "id": 26497,
+            "nodeType": "VariableDeclaration",
+            "src": "162:22:17",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "61bc221a",
+            "mutability": "mutable",
+            "name": "counter",
+            "nameLocation": "177:7:17",
+            "scope": 26550,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Counter_$26572",
+              "typeString": "contract Counter"
+            },
+            "typeName": {
+              "id": 26496,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 26495,
+                "name": "Counter",
+                "nameLocations": [
+                  "162:7:17"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 26572,
+                "src": "162:7:17"
+              },
+              "referencedDeclaration": 26572,
+              "src": "162:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Counter_$26572",
+                "typeString": "contract Counter"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 26514,
+            "nodeType": "FunctionDefinition",
+            "src": "191:94:17",
+            "nodes": [],
+            "body": {
+              "id": 26513,
+              "nodeType": "Block",
+              "src": "215:70:17",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 26505,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 26500,
+                      "name": "counter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26497,
+                      "src": "225:7:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Counter_$26572",
+                        "typeString": "contract Counter"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 26503,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "235:11:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_Counter_$26572_$",
+                          "typeString": "function () returns (contract Counter)"
+                        },
+                        "typeName": {
+                          "id": 26502,
+                          "nodeType": "UserDefinedTypeName",
+                          "pathNode": {
+                            "id": 26501,
+                            "name": "Counter",
+                            "nameLocations": [
+                              "239:7:17"
+                            ],
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 26572,
+                            "src": "239:7:17"
+                          },
+                          "referencedDeclaration": 26572,
+                          "src": "239:7:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Counter_$26572",
+                            "typeString": "contract Counter"
+                          }
+                        }
+                      },
+                      "id": 26504,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "235:13:17",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Counter_$26572",
+                        "typeString": "contract Counter"
+                      }
+                    },
+                    "src": "225:23:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Counter_$26572",
+                      "typeString": "contract Counter"
+                    }
+                  },
+                  "id": 26506,
+                  "nodeType": "ExpressionStatement",
+                  "src": "225:23:17"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "30",
+                        "id": 26510,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "276:1:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26507,
+                        "name": "counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26497,
+                        "src": "258:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Counter_$26572",
+                          "typeString": "contract Counter"
+                        }
+                      },
+                      "id": 26509,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "266:9:17",
+                      "memberName": "setNumber",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26564,
+                      "src": "258:17:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) external"
+                      }
+                    },
+                    "id": 26511,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "258:20:17",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26512,
+                  "nodeType": "ExpressionStatement",
+                  "src": "258:20:17"
+                }
+              ]
+            },
+            "functionSelector": "0a9254e4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUp",
+            "nameLocation": "200:5:17",
+            "parameters": {
+              "id": 26498,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "205:2:17"
+            },
+            "returnParameters": {
+              "id": 26499,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "215:0:17"
+            },
+            "scope": 26550,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 26530,
+            "nodeType": "FunctionDefinition",
+            "src": "291:107:17",
+            "nodes": [],
+            "body": {
+              "id": 26529,
+              "nodeType": "Block",
+              "src": "323:75:17",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 26517,
+                        "name": "counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26497,
+                        "src": "333:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Counter_$26572",
+                          "typeString": "contract Counter"
+                        }
+                      },
+                      "id": 26519,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "341:9:17",
+                      "memberName": "increment",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26571,
+                      "src": "333:17:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 26520,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "333:19:17",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26521,
+                  "nodeType": "ExpressionStatement",
+                  "src": "333:19:17"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 26523,
+                            "name": "counter",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26497,
+                            "src": "371:7:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Counter_$26572",
+                              "typeString": "contract Counter"
+                            }
+                          },
+                          "id": 26524,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "379:6:17",
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 26554,
+                          "src": "371:14:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view external returns (uint256)"
+                          }
+                        },
+                        "id": 26525,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "371:16:17",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "31",
+                        "id": 26526,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "389:1:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        }
+                      ],
+                      "id": 26522,
+                      "name": "assertEq",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1999,
+                        2024,
+                        2037,
+                        2053,
+                        2095,
+                        2137,
+                        2179,
+                        2216,
+                        2253,
+                        2290,
+                        342,
+                        367,
+                        397,
+                        422,
+                        481,
+                        506,
+                        536,
+                        561,
+                        1661,
+                        1696
+                      ],
+                      "referencedDeclaration": 536,
+                      "src": "362:8:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 26527,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "362:29:17",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26528,
+                  "nodeType": "ExpressionStatement",
+                  "src": "362:29:17"
+                }
+              ]
+            },
+            "functionSelector": "b913a5ca",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testIncrement",
+            "nameLocation": "300:13:17",
+            "parameters": {
+              "id": 26515,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "313:2:17"
+            },
+            "returnParameters": {
+              "id": 26516,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:0:17"
+            },
+            "scope": 26550,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 26549,
+            "nodeType": "FunctionDefinition",
+            "src": "404:117:17",
+            "nodes": [],
+            "body": {
+              "id": 26548,
+              "nodeType": "Block",
+              "src": "445:76:17",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 26538,
+                        "name": "x",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26532,
+                        "src": "473:1:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26535,
+                        "name": "counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26497,
+                        "src": "455:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Counter_$26572",
+                          "typeString": "contract Counter"
+                        }
+                      },
+                      "id": 26537,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "463:9:17",
+                      "memberName": "setNumber",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26564,
+                      "src": "455:17:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) external"
+                      }
+                    },
+                    "id": 26539,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "455:20:17",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26540,
+                  "nodeType": "ExpressionStatement",
+                  "src": "455:20:17"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 26542,
+                            "name": "counter",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26497,
+                            "src": "494:7:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Counter_$26572",
+                              "typeString": "contract Counter"
+                            }
+                          },
+                          "id": 26543,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "502:6:17",
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 26554,
+                          "src": "494:14:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view external returns (uint256)"
+                          }
+                        },
+                        "id": 26544,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "494:16:17",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 26545,
+                        "name": "x",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26532,
+                        "src": "512:1:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 26541,
+                      "name": "assertEq",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1999,
+                        2024,
+                        2037,
+                        2053,
+                        2095,
+                        2137,
+                        2179,
+                        2216,
+                        2253,
+                        2290,
+                        342,
+                        367,
+                        397,
+                        422,
+                        481,
+                        506,
+                        536,
+                        561,
+                        1661,
+                        1696
+                      ],
+                      "referencedDeclaration": 536,
+                      "src": "485:8:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 26546,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "485:29:17",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26547,
+                  "nodeType": "ExpressionStatement",
+                  "src": "485:29:17"
+                }
+              ]
+            },
+            "functionSelector": "70f985be",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testSetNumber",
+            "nameLocation": "413:13:17",
+            "parameters": {
+              "id": 26533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26532,
+                  "mutability": "mutable",
+                  "name": "x",
+                  "nameLocation": "435:1:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26549,
+                  "src": "427:9:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "427:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "426:11:17"
+            },
+            "returnParameters": {
+              "id": 26534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "445:0:17"
+            },
+            "scope": 26550,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 26493,
+              "name": "Test",
+              "nameLocations": [
+                "151:4:17"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8875,
+              "src": "151:4:17"
+            },
+            "id": 26494,
+            "nodeType": "InheritanceSpecifier",
+            "src": "151:4:17"
+          }
+        ],
+        "canonicalName": "CounterTest",
+        "contractDependencies": [
+          26572
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          26550,
+          8875,
+          1868,
+          1865,
+          8833,
+          5739,
+          5350,
+          3778,
+          3114,
+          1808
+        ],
+        "name": "CounterTest",
+        "nameLocation": "136:11:17",
+        "scope": 26551,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 17
+}
